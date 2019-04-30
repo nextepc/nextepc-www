@@ -4,7 +4,7 @@ order: 2
 page: installation
 ---
 
-Verified on Ubuntu 16.04(zenial) and 18.04(Bionic Bearer).
+Package installation is verified on Ubuntu 18.04, while building is verified on both Ubuntu 16.04(Zenial) and 18.04(Bionic Bearer).
 
 <br/>
 
