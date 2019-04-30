@@ -85,7 +85,7 @@ if [ ! -x /usr/bin/mongod ]; then
     PRE_INSTALL_PKGS="${PRE_INSTALL_PKGS} mongodb"
 fi
 
-if [ ! -x /usr/bin/node ] && [ ! -x /usr/bin/wget ]; then
+if [ ! -x /usr/bin/node ]; then
     PRE_INSTALL_PKGS="${PRE_INSTALL_PKGS} nodejs"
 fi
 
