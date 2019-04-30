@@ -12,7 +12,7 @@ This post explains how to install **NextEPC**.
 
 ## Operating System Requirements
 
-We recommend that the use of Ubuntu 16.04 LTS or higher, but NextEPC should also run on other distributions as well as on virtualized environment.
+We recommend that the use of Ubuntu 18.04 LTS or higher, but NextEPC should also run on other distributions as well as on virtualized environment.
 
 * ### [Ubuntu](/installation/02-ubuntu)
 * ### [CentOS](/installation/03-centos)
