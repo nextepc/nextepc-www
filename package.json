@@ -9,7 +9,7 @@
     "export": "nextein build && nextein export -o docs",
     "now-build": "npm run export",
     "deploy": "cd docs && now alias --token=$NOW $(now --static --no-clipboard --token=$NOW --public) nextepc",
-    "github": "rm -rf node_modules/.cache && nextin build && nextin export -o docs && touch docs/.nojekyll && git add docs && git commit -m \"Deploy\" && git push origin master"
+    "github": "rm -rf node_modules/.cache && nextein build && nextein export -o docs && touch docs/.nojekyll && git add docs && git commit -m \"Deploy\" && git push origin master"
   },
   "keywords": [],
   "author": "NextEPC Inc.",
