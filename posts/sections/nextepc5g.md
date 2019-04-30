@@ -7,4 +7,5 @@ order: 1
 ---
 
 
-*NextEPC for 5G* is available on mid 2020. Coming soon!!
+*NextEPC for 5G* will be available on mid 2020. 
+Coming soon!!
