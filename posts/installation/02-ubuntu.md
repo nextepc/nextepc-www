@@ -18,7 +18,7 @@ Install NextEPC daemons which consist of *nextepc-mmed*, *nextepc-sgwd*, *nextep
 ```bash
 sudo apt-get update
 sudo apt-get -y install software-properties-common
-sudo add-apt-repository ppa:acetcom/nextepc
+sudo add-apt-repository ppa:nextepc/nextepc
 sudo apt-get update
 sudo apt-get -y install nextepc
 ```
