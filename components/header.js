@@ -1,19 +1,36 @@
 
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import Link from 'nextein/link'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 export default () => {
   return (
     <Header>
       <Main>
-        <img src="/static/logo_300_2.png"/>
-        <Title>Build your own LTE network easy</Title>
+      <TransitionGroup className="home-group" component={null}>
+        <CSSTransition classNames="brand" timeout={1500} appear in> 
+          <Title>NextEPC</Title>
+        </CSSTransition>
+        <CSSTransition classNames="hello" timeout={750} appear in>
+          <Hello>Open Source</Hello>
+        </CSSTransition>
+      </TransitionGroup>
       </Main>
-      <Actions>
-        <Link href="/guides" passHref><Button >GET STARTED</Button></Link>
-        <Link href="/docs" passHref><Secondary inverted>DOCS</Secondary></Link>
-      </Actions>
+      <TransitionGroup className="action-group" component={null}>
+        <CSSTransition classNames="actions" timeout={2000} appear in>
+          <Actions>
+            <Link href="/installation" passHref><Button >Installation</Button></Link>
+            <Link href="/configuration" passHref><Button >Configuration</Button></Link>
+          </Actions>
+        </CSSTransition>
+        <CSSTransition classNames="actions" timeout={2000} appear in>
+          <Actions>
+            <Link href="https://nextepc.com" passHref><Secondary inverted>Services & Support</Secondary></Link>
+          </Actions>
+        </CSSTransition>
+      </TransitionGroup>
+
     </Header>
   )
 }
@@ -31,7 +48,6 @@ const Header = styled('header')`
 
 const Main = styled('div')`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -44,7 +60,7 @@ const Hello = styled('div')`
 const Title = styled('h1')`
   padding: 10px;
   font-weight: 100;
-  border-bottom: 4px solid #f63;  
+  border-bottom: 4px solid #ff4500;  
 `
 
 const Brand = styled('span')`
@@ -59,10 +75,10 @@ const Actions = styled('div')`
 `
 
 const Button = styled('a')`
-  border: 2px solid #f63;
+  border: 2px solid #ff4500;
   border-radius: 4px;
   color: #fff;
-  background-color: #f63;
+  background-color: #ff4500;
   
   font-size: .45em;
   font-weight: bold;
@@ -72,17 +88,17 @@ const Button = styled('a')`
   padding: 10px 20px;
   margin: 20px 10px;  
   :hover {
-    color: #f63;
+    color: #ff4500;
     background-color: #fafafa;
   }
 `
 
 const Secondary = styled(Button)`
-  color: #f63;
+  color: #ff4500;
   background-color: #fff;
 
   :hover {
-    color: #f63;
-    background-color: #f9f9f9;
+    color: #ff6500;
+    background-color: #eee;
   }
 `

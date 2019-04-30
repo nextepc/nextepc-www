@@ -1,12 +1,12 @@
 
 import React from 'react'
-import styled from 'react-emotion'
-import Link from 'nextein/link'
-import Head from 'next/head'
+import styled from '@emotion/styled'
+import Link from 'next/link'
 import Router from 'next/router'
 import NProgress from 'nprogress'
-
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import Github from './icons/github'
+import Npm from './icons/npm'
 
 NProgress.configure({
   showSpinner: false
@@ -19,21 +19,25 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 export default ({ title, showHome = false, ...props }) => {
-  const isGuide = (title === 'guides')
-  const isDoc = (title === 'documentation')
+  const isInstallation = (title === 'installation')
+  const isConfiguration = (title === 'configuration')
   return (
-    <React.Fragment>
-      <Head><link rel='stylesheet' type='text/css' href='/static/nprogress.css' /></Head>
-      <Nav {...props} showHome={showHome}>
-        { title && <Title>NextEPC<Light>/{title}</Light></Title> }
-        { showHome && <Link href="/" passHref><Item>Home</Item></Link>}
-        <Link href="/guides" passHref><Item className={isGuide && 'active'} >Guides</Item></Link>
-        <Link href="/docs" passHref><Item className={isDoc && 'active'}>Docs</Item></Link>
-        <GithubLink href="https://github.com/acetcom/nextepc">
-          <Github fill="#c0c0c0" width="25" alt="Github"/>
-        </GithubLink>
-      </Nav>
-    </React.Fragment>
+
+    <Nav {...props} showHome={showHome}>
+      {title && (
+        <TransitionGroup className="navigation-group" component={null}>
+          <CSSTransition classNames="navigation-title" timeout={500} appear in>
+            <Title>NextEPC open source<Light>/{title}</Light></Title>
+          </CSSTransition>
+        </TransitionGroup>
+      )
+      }
+      {showHome && <Link href="/" passHref><Item>Home</Item></Link>}
+      <Link href="/installation" passHref><Item className={isInstallation && 'active'} >Installation</Item></Link>
+      <Link href="/configuration" passHref><Item className={isConfiguration && 'active'}>Configuration</Item></Link>
+      <Link href="https://github.com/nextepc/" passHref><Item>Github</Item></Link>
+      <Link href="https://nextepc.com/" passHref><Item>Enterprise</Item></Link>
+    </Nav>
   )
 }
 
@@ -44,9 +48,10 @@ const Nav = styled('nav')`
   justify-content: flex-end;
   align-items: stretch;
   box-sizing: border-box;  
-  > * {
+
+  > a, > div {
     display: flex;
-    align-items: center;    
+    align-items: center;
   }
   > a {
     padding: 0 15px;
@@ -56,7 +61,7 @@ const Nav = styled('nav')`
       padding-right: 0;
     }
   }
-  border-bottom: ${ ({ showHome }) => showHome ? '1px solid #eee' : '' }
+  border-bottom: ${ ({ showHome }) => showHome ? '1px solid #eee' : ''}
 `
 
 const Item = styled('a')`
@@ -65,12 +70,12 @@ const Item = styled('a')`
   letter-spacing: .2em;
   
   :hover {
-    color: #f63;
+    color: #ff4500;
   }
 
   &.active {
-    color: #f63;
-    border-bottom: 3px solid #f63;
+    color: #ff4500;
+    border-bottom: 3px solid #ff4500;
     border-top: 3px solid transparent;    
   }
 `
@@ -89,5 +94,11 @@ const Light = styled('span')`
 const GithubLink = styled('a')`
   &:hover svg {
     fill: #212121;
+  }
+`
+
+const NpmLink = styled('a')`
+  &:hover svg {
+    fill: #C12127;
   }
 `

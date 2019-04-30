@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 export const Main = styled('main')`
   display: flex;
@@ -22,23 +22,30 @@ export const Side = styled('div')`
   background: #eee;
 `
 
+export const ArticleTransitionWrapper = styled('div')`
+  flex: 4;
+  width: 1px; /* width to get the Article to not expand */
+`
+
 export const Article = styled('article')`
   position: relative;
-  flex: 4;
-  width: 1px; // width to get the Article to not expand
+  // flex: 4;
+  // width: 1px; // width to get the Article to not expand
   padding: 3.5em 0 3.5em 3.5em;
 `
 
 export const Title = styled('h1')`
+  color: rgba(0,0,0, .8);
   font-size: 4em;
   font-weight: 100;
   margin-top: -15px;
   margin-bottom: 130px;
   padding-bottom: 15px;
-  border-bottom: 3px solid #f63;
+  border-bottom: 3px solid #ff4500;
 `
 
 export const Category = styled('h2')`
+  color: rgba(0,0,0, .8);
   font-size: .8em;
   font-weight: 100;
   color: #666;
@@ -54,7 +61,7 @@ export const Paragraph = styled('p')`
   line-height: 1.5em;
   max-width: 800px;
 
-  &:not(:first-child):not(:last-child) {
+  &:not(:first-of-type):not(:last-of-type) {
     margin: 1em 0;
   }
 

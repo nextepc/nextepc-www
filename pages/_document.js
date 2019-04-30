@@ -1,30 +1,12 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { extractCritical } from 'emotion-server'
-
-const dev = process.env.NODE_ENV !== 'production'
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
-    const page = renderPage()
-    const styles = extractCritical(page.html)
-    return { ...page, ...styles }
-  }
-
-  constructor (props) {
-    super(props)
-    const { __NEXT_DATA__, ids } = props
-    if (ids) {
-      __NEXT_DATA__.ids = ids
-    }
-  }
-
   render () {
     return (
       <html lang="en">
         <Head>
-          <title>NextEPC</title>
-          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
-          <link rel='icon' href='/static/favicon.ico'/>
+          <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
+          <link rel='stylesheet' type='text/css' href='/static/transitions.css' />
         </Head>
         <body>
           <Main />

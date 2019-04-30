@@ -1,9 +1,9 @@
-const { default: config } = require('nextein/config')
+const { withNextein } = require('nextein/config')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 const EnvironmentPlugin = require('webpack/lib/EnvironmentPlugin')
 
-module.exports = config({
+module.exports = withNextein({
   webpack: (config) => {
     config.plugins.push(
       ...[      
@@ -25,7 +25,7 @@ module.exports = config({
   },
 
   exportPathMap: () => ({
-    '/guides': { page: '/guides', query: {} }, // <-query is needed, otherwise shallow-eq returns error
-    '/docs': { page: '/docs', query: {} }
+    '/installation': { page: '/installation', query: {} }, // <-query is needed, otherwise shallow-eq returns error
+    '/configuration': { page: '/configuration', query: {} }
   })
 })
