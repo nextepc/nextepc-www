@@ -28,7 +28,7 @@ Install Web User Interface (WebUI) which supports the user subscription manageme
 ```bash
 sudo apt-get -y install curl
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-curl -sL http://nextepc.org/static/webui/install | sudo -E bash -
+curl -sL https://nextepc.org/static/webui/install | sudo -E bash -
 ```
 
 * ### Verify the installation
@@ -63,7 +63,7 @@ pgwtun    Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
 * ### Uninstall NextEPC
 Uninstall WebUI, NextEPC daemons and log files:
 ```bash
-curl -sL http://nextepc.org/static/webui/uninstall | sudo -E bash -
+curl -sL https://nextepc.org/static/webui/uninstall | sudo -E bash -
 sudo apt-get purge nextepc*
 sudo rm -Rf /var/log/nextepc
 ```
