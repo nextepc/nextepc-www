@@ -11091,6 +11091,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["", ""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -11142,9 +11154,7 @@ function (_NextApp) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["Global"], {
-        styles:
-        /*#__PURE__*/
-        Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["css"])(globalStyles, "label:App;" + ( false ? undefined : "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JyYW5kb24vZ2l0L25leHRlcGMtd3d3L3BhZ2VzL19hcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbUMyQiIsImZpbGUiOiIvaG9tZS9icmFuZG9uL2dpdC9uZXh0ZXBjLXd3dy9wYWdlcy9fYXBwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IE5leHRBcHAsIHsgQ29udGFpbmVyIH0gZnJvbSAnbmV4dC9hcHAnXG4vLyBpbXBvcnQgeyBpbmplY3RHbG9iYWwsIGh5ZHJhdGUgfSBmcm9tICdlbW90aW9uJ1xuaW1wb3J0IHsgR2xvYmFsLCBjc3MgfSBmcm9tICdAZW1vdGlvbi9jb3JlJ1xuLy8gQWRkcyBzZXJ2ZXIgZ2VuZXJhdGVkIHN0eWxlcyB0byBlbW90aW9uIGNhY2hlLlxuLy8gJ19fTkVYVF9EQVRBX18uaWRzJyBpcyBzZXQgaW4gJ19kb2N1bWVudC5qcydcbi8vIGlmICh0eXBlb2Ygd2luZG93ICE9PSAndW5kZWZpbmVkJykge1xuLy8gICBoeWRyYXRlKHdpbmRvdy5fX05FWFRfREFUQV9fLmlkcylcbi8vIH1cblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgQXBwIGV4dGVuZHMgTmV4dEFwcCB7XG5cbiAgcmVuZGVyICgpIHsgICAgXG4gICAgY29uc3QgeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9ID0gdGhpcy5wcm9wcztcblxuICAgIC8vIGluamVjdEdsb2JhbFxuICAgIGNvbnN0IGdsb2JhbFN0eWxlcyA9IGBcbiAgICAgIGJvZHkge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsIFwiSGVsdmV0aWNhIE5ldWVcIiwgXCJMdWNpZGEgR3JhbmRlXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiAxMDA7XG4gICAgICB9XG5cbiAgICAgIGEgeyBcbiAgICAgICAgY29sb3I6ICM2NjY7IFxuICAgICAgICBmb250LXdlaWdodDogMjAwO1xuICAgICAgICB0ZXh0LWRlY29yYXRpb24tY29sb3I6ICNkZGQ7XG4gICAgICB9XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgIH1cbiAgICBgICAgIFxuICAgIHJldHVybiAoXG4gICAgICA8Q29udGFpbmVyPlxuICAgICAgICA8R2xvYmFsIHN0eWxlcz17Y3NzYCR7Z2xvYmFsU3R5bGVzfWB9IC8+XG4gICAgICAgIDxDb21wb25lbnQgeyAuLi5wYWdlUHJvcHMgfSAvPlxuICAgICAgPC9Db250YWluZXI+XG4gICAgKVxuICB9XG59Il19 */")),
+        styles: Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), globalStyles),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 36
