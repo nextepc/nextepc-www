@@ -85,6 +85,10 @@ sudo apt-get -y install mongodb
 sudo systemctl start mongodb
 ```
 
+* ### Install MongoDB C Driver
+[MongoDB C Driver](http://www.mongoc.org/libmongoc/current/index.html) is a MongoDB client library. Please install the latest *libmongoc* following the instructions here: [http://www.mongoc.org/libmongoc/current/installing.html](http://www.mongoc.org/libmongoc/current/installing.html). 
+
+
 * ### Define a TUN device
 Write the configuration file for *pgwtun* and create it:
 ```bash
@@ -111,7 +115,7 @@ Install the following dependencies:
 ```bash
 sudo apt-get -y install autoconf libtool gcc pkg-config \
          git flex bison libsctp-dev libgnutls28-dev libgcrypt-dev \
-         libssl-dev libidn11-dev libmongoc-dev libbson-dev libyaml-dev
+         libssl-dev libidn11-dev libbson-dev libyaml-dev
 ```
 
 * ### Build

@@ -28,6 +28,11 @@ mkdir -p data/db
 mongod --dbpath data/db
 ```
 
+
+* ### Install MongoDB C Driver
+[MongoDB C Driver](http://www.mongoc.org/libmongoc/current/index.html) is a MongoDB client library. Please install the latest *libmongoc* following the instructions here: [http://www.mongoc.org/libmongoc/current/installing.html](http://www.mongoc.org/libmongoc/current/installing.html). 
+
+
 * ### Set loopback interfaces up
 ```bash
 sudo ifconfig lo0 alias 127.0.0.2 netmask 255.255.255.255
@@ -44,7 +49,7 @@ It can be downloaded from [http://tuntaposx.sourceforge.net/](http://tuntaposx.s
 * ### Install dependencies
 Install the following dependencies:
 ```bash
-brew install autoconf automake libtool gnu-sed mongo-c-driver \
+brew install autoconf automake libtool gnu-sed \
          libusrsctp gnutls libgcrypt libidn libyaml pkg-config
 ```
 

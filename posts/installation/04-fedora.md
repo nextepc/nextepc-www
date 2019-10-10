@@ -23,6 +23,10 @@ mkdir -p data/db
 mongod --dbpath data/db
 ```
 
+* ### Install MongoDB C Driver
+[MongoDB C Driver](http://www.mongoc.org/libmongoc/current/index.html) is a MongoDB client library. Please install the latest *libmongoc* following the instructions here: [http://www.mongoc.org/libmongoc/current/installing.html](http://www.mongoc.org/libmongoc/current/installing.html). 
+
+
 * ### Define a TUN device
 Create *pgwtun*:
 ```
@@ -38,7 +42,7 @@ sudo ip link set pgwtun up
 Install the following dependencies:
 ```bash
 sudo dnf -y install git gcc flex bison autoconf libtool \
-         mongo-c-driver-devel lksctp-tools-devel libidn-devel \
+         lksctp-tools-devel libidn-devel \
          gnutls-devel libgcrypt-devel openssl-devel cyrus-sasl-devel \
          snappy-devel libyaml-devel
 ```

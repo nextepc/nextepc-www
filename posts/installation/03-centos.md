@@ -30,6 +30,10 @@ sudo yum -y install mongodb-org
 sudo systemctl start mongod (if '/usr/bin/mongod' is not running)
 ```
 
+* ### Install MongoDB C Driver
+[MongoDB C Driver](http://www.mongoc.org/libmongoc/current/index.html) is a MongoDB client library. Please install the latest *libmongoc* following the instructions here: [http://www.mongoc.org/libmongoc/current/installing.html](http://www.mongoc.org/libmongoc/current/installing.html). 
+
+
 * ### Define a TUN device
 Create *pgwtun*:
 ```
@@ -46,13 +50,6 @@ Install the following dependencies:
 sudo yum -y install git flex bison autoconf libtool \
          lksctp-tools-devel libidn-devel gnutls-devel libgcrypt-devel \
          openssl-devel cyrus-sasl-devel libyaml-devel
-```
-
-* ### Install Mongo-c-driver
-Configure EPEL package and install mongo-c-driver:
-```bash
-sudo yum -y install epel-release
-sudo yum -y install mongo-c-driver-devel
 ```
 
 * ### Build
