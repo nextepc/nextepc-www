@@ -20,7 +20,7 @@
     "babel-plugin-emotion": "^10.0.2",
     "emotion": "^10.0.2",
     "highlight.js": "9.12.0",
-    "next": "^7.0.2",
+    "next": "^13.0.2",
     "nextein": "^2.1.2",
     "nprogress": "^0.2.0",
     "react": "^16.6.3",
